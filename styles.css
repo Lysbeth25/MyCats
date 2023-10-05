@@ -1,0 +1,152 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Patrick Hand', cursive;
+    background-color: #f8f8f8;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.title {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.cat-image-mustac {
+    width: 80%; /* Set a width to maintain consistency */
+    height: 50%; /* Automatically adjust the height to maintain aspect ratio */
+    border-radius: 5%; /* Make the image circular */
+    overflow: hidden; /* Hide the overflow for the circular shape */
+    position: relative;
+}
+
+.cat-image-lambing {
+    width: 80%; /* Set a width to maintain consistency */
+    height: 30%; /* Automatically adjust the height to maintain aspect ratio */
+    border-radius: 5%; /* Make the image circular */
+    overflow: hidden; /* Hide the overflow for the circular shape */
+    position: relative;
+}
+
+.cat-image-mustac::before,
+.cat-image-lambing::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    border-radius: 50%;
+    width: 50px; /* Adjust to control the size of the heart shape */
+    height: 80px; /* Adjust to control the size of the heart shape */
+    background: #ff6b6b;
+    transform: rotate(-45deg);
+    transition: all 0.3s ease-in-out;
+}
+
+.cat-image.heart::before {
+    left: 30px;
+    transform: rotate(-45deg);
+}
+
+.cat-image.heart::after {
+    left: 0;
+    transform: rotate(45deg);
+}
+
+.cat-image.hover-heart:hover::before,
+.cat-image.hover-heart:hover::after {
+    width: 60px;
+    height: 100px;
+
+
+}
+
+.card-content {
+    padding: 10px 0;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+}
+
+.learn-more {
+    display: inline-block;
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.learn-more:hover {
+    background-color: #ff4040;
+}
+
+.hidden-list {
+    display: none;
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.hidden-list li {
+    margin-bottom: 5px;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    /* Adjust card width for smaller screens */
+    .card {
+        width: 100%; /* Full width on screens up to 768px */
+        max-width: 400px; /* Limit card width on larger screens */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for even smaller screens */
+    .card {
+        max-width: 100%; /* Full width on screens up to 480px */
+    }
+}
