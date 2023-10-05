@@ -104,7 +104,7 @@ p {
     color: #666;
 }
 
-.learn-more {
+.about-me {
     display: inline-block;
     background-color: #ff6b6b;
     color: #fff;
@@ -117,7 +117,7 @@ p {
     transition: background-color 0.3s ease-in-out;
 }
 
-.learn-more:hover {
+.about-me:hover {
     background-color: #ff4040;
 }
 
